@@ -1,0 +1,123 @@
+@use"./formulario.scss";
+@use "./secondDiv.scss";
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    z-index: 1;
+
+    &>.mainDiv {
+        background-color: whitesmoke;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        border-radius: 10px;
+        box-shadow: 0 0 10px;
+        position: relative;
+        max-width: 80vh;
+        border-radius: 40px;
+
+        &>form {
+            @extend%formulario;
+
+            &.formFotoDePerfil {
+                & div>button {
+                    border: none;
+                    background-color: gray;
+                    border-radius: 20px;
+                    padding: 10px;
+                    color: white;
+                }
+
+                & div>button:nth-child(1):hover {
+                    background-color: green;
+                }
+
+                & div>button:nth-child(2):hover {
+                    background-color: red;
+                }
+
+                &>.perfilFoto {
+                    border-radius: 50%;
+                    width: 50%;
+                    aspect-ratio: 1;
+                    background-image: url(https://icones.pro/wp-content/uploads/2021/02/icone-utilisateur-gris.png);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: cover;
+                    // z-index: 1;
+                }
+            }
+        }
+    }
+
+    &>.secondDiv {
+        height: 100vh;
+        display: flex;
+        z-index: 1;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+
+        & .filtro {
+            position: relative;
+            top: 150px;
+            display: grid;
+            grid-template-columns: 2fr 1fr 2fr;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+
+            &>select {
+                color: blue;
+                border: none;
+                outline: none;
+                border-radius: 10px;
+                padding: 10px;
+            }
+
+            & hr {
+                width: 100%;
+                background-color: black;
+                height: 0.3vw;
+            }
+        }
+
+        &>form {
+            @extend%secondDivForm;
+        }
+
+        &>.notasCont {
+            @extend%notasCont;
+        }
+    }
+
+    .modalDatos,
+    .modalNotas {
+        background-color: white;
+        width: 80vw;
+        height: 80vh;
+        position: fixed;
+        border-radius: 20px;
+        z-index: 2; 
+        &>.contModal{
+            
+            &>.formMod{
+                @extend %formulario;
+                display: flex;
+                &> .modBotones > button{
+                    @extend %button;
+                }
+                &> .modBotones > button:nth-child(1):hover{
+                    background-color: green;
+                }
+                &> .modBotones > button:nth-child(2):hover{
+                    background-color: red;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,47 @@
+%button{
+    background-color: #0181cc;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;    
+    }
+
+%formulario{
+        // position: relative;
+        // top: 30px;
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border-radius: 20px;
+        gap: 10px;
+        width: 100%;
+        border-radius: 40px;
+        padding: 10px;
+        box-shadow: 2px 2px 50px blue;
+        & > .p-error{
+            color: red;
+            font-weight: bold;
+        }
+        &> input{
+            background-color: rgba(179, 176, 176, 0.326);
+            border: none;
+            border-radius: 20px;
+            padding: 5px;
+        }
+        &> button{
+            @extend %button;
+                }
+        &> button:hover{
+                background-color: rgba(128, 128, 128, 0.519);
+                transform: scale(1.1,1.1);
+                }
+            }
+        
+            
+
+
+        
+
+
