@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="/assets/logo_trello-removebg-preview-CAMySms8.png" type="image/x-icon">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trello</title>
+  <script type="module" crossorigin src="/assets/index-DCYcMpiN.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-B9qORFqj.css">
+</head>
+<body>
+    <header id="header">
+        <h1>
+
+            <img src="/assets/logo_trello-removebg-preview-CAMySms8.png" alt="">
+            <span>Trello</span>
+        </h1>
+        
+        <label>
+            <input type="checkbox">
+            <div id="perfilFoto1"></div>
+            <ul >
+                <li id="Config">Configuracion</li>
+                <li id="salir">Salir</li>
+            </ul>
+            <h2 id="nombrePersonaHeader">Nombre persona</h2>
+        </label>
+        <!-- <button>
+        </button> -->
+    </header>
+    <main>
+        <div id="mainDiv" class="mainDiv showCard">
+            <form id="formIniciar" class="IniciarSesion">
+                <h2>Iniciar Sesion</h2>
+                <label for="mail">Correo</label>
+                <input type="email" id="mail">
+                <label for="password">Contraseña</label>
+                <input type="password" id="password">
+                <button id="IniciarSesionBoton" type="submit" class="IniciarSesion">Iniciar Sesion</button>
+                <p class="p-error" id="iniciarError"></p>
+                <a id="cuentaPorHacer" href="#">Aun no tengo mi cuenta</a>
+            </form>
+
+            <form id="formRegistar" class="Registrarse">
+                <h2>Registrarse</h2>
+                <label for="name1">Nombre</label>
+                <input type="text" id="name1">
+                <label for="lastName1">Apellido</label>
+                <input type="text" id="lastName1">
+                <label for="age1">Edad </label>
+                <input type="number"  id="age1">
+                <label for="mail1">Correo</label>
+                <input type="email" id="mail1">
+                <label for="password1">Contraseña</label>
+                <input type="password" id="password1">
+                <label for="passwordconfirm1">Confirmar contraseña</label>
+                <input type="password" id="passwordconfirm1">
+                <button id="RegistrarseBoton" type="submit">Registrarse</button>
+                <p class="p-error" id="RegistarError"></p>
+                <a id="cuentaHecha" href="#">Ya hice mi cuenta</a>
+            </form>
+
+            <form class="formFotoDePerfil" id="FormFotoDePerfil">
+                <h2 id="tituloCambiarFoto">Foto de perfil</h2>
+                <div class="perfilFoto" id="perfilFoto" ></div>
+                <div class="modificarbotonesdiv" >
+                    <button type="button" id="mainModButton" >Modificar datos</button>
+                </div>
+                <div class="saveanddelete">
+                    <button type="button"  id="guardarFoto">Guardar</button>
+                    <button type="button" id="cancelarFoto" >Cancelar</button>
+                </div>
+            </form>
+            
+        </div>
+        <div id="secondDiv" class="secondDiv">
+            <form id="notas" class="notas">
+            <h2>Hacer una anotacion</h2>
+                <label for="tituloNota">Ingresa un titulo para tu nota</label>
+                <input type="text" class="tituloNota" id="tituloNota">
+                <label for="nota">Ingresa el contenido de tu nota</label>
+                <textarea name="" class="nota" id="nota"></textarea>
+                <button type="submit">Subir</button>
+            </form>
+
+            <div class="filtro">
+                <hr>
+                <select name="" id="">
+                    <option value="1">Todos</option>
+                    <option value="2">Pendiente</option>
+                    <option value="3">Completo</option>
+                    <option value="4">Incompleto</option>
+                </select>
+                <hr>
+            </div>
+
+            <div class="modNotasFormMain ocultarModalNotas " id="modNotasFormMain">
+                <form id="modNotasForm" class="modNotasForm">
+                    <h2>Modificar Nota</h2>
+                    <label for="notasformTitulo">Ingresa un nuevo titulo</label>
+                    <input id="notasformTitulo" type="text">
+                    <label for="notasformTexto">Ingresa un nuevo texto</label>
+                    <input id="notasformTexto" type="text">
+                    <button id="btEditarNota" type="button">Guardar</button>
+                </form>
+            </div>
+
+            <div id="notasCont" class="notasCont" >
+
+                <div id="notaSubida" class="showNote">
+                        <div class="editars">
+                            <img src="https://cdn-icons-png.freepik.com/512/657/657011.png" alt="">
+                            <ul>
+                                <li class="cambiar">editar</li>
+                                <li class="borrar">borrar</li>
+                            </ul>
+                        </div>
+                        <option value="1">Pendiente</option>
+                        <option value="2">Completo</option>
+                        <option value="3">Incompleto</option>
+                    
+                    <!-- <p id="estado">Estado</p> -->
+                </div>
+            </div>
+        </div> 
+        <div id="modalDatos" class="modalDatos ocultarModal" >
+            <div class="contModal">
+                <form id="formMod" class="formMod">
+                <h2>Modificar Datos</h2>
+                    <label for="modname1">Nombre</label>
+                    <input type="text" id="modname1">
+                    <label for="modlastName1">Apellido</label>
+                    <input type="text" id="modlastName1">
+                    <label for="modage1">Edad </label>
+                    <input type="number"  id="modage1">
+                    <label for="modmail1">Correo</label>
+                    <input type="email" id="modmail1">
+                    <label for="modpassword1">Contraseña</label>
+                    <input type="password" id="modpassword1">
+                    <label for="modpasswordconfirm1">Confirmar contraseña</label>
+                    <input type="password" id="modpasswordconfirm1">
+                    <p id="modModificarError" class="p-error"></p>
+                    <div class="modBotones">
+                        <button id="modGuardar" type="submit">Guardar</button>  
+                        <button id="modCancelar" type="button">Cancelar</button>  
+                    </form>
+                    </div>
+            </div> 
+        </div> 
+        <!-- <div id="modalNotas" class="modalNotas" >
+            
+        </div>  -->
+    </main>
+    <!-- <footer></footer> -->
+
+
+</body>
+</html>
